@@ -4,13 +4,36 @@
   <head>
     <title>Socket.IO chat</title>
     <style>
-      /* Your existing CSS styles here */
+      body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      
+      .basebar{
+        width: 100vw;
+        height: 5vh;
+        position: sticky;
+        bottom: 0px;
+      }
+      
+      input{
+        width: 79vw;
+        height: 4vh;
+      }
+      
+      button{
+        width: 19vw;    
+        height: 5vh;
+        
+      }
     </style>
   </head>
   <body>
     <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
+    <form id="form" class="basebar" action="">
+      <input id="input" autocomplete="off" />
+      <button >Send</button>
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
